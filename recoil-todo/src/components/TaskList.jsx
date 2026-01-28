@@ -1,0 +1,15 @@
+import { useRecoilValue } from "recoil";
+import { filteredTasksSelector } from "../selectors/filteredTasksSelector";
+import { TaskItem } from "./TaskItem";
+
+export function TaskList() {
+  const tasks = useRecoilValue(filteredTasksSelector);
+
+  return (
+    <ul>
+      {tasks.map(task => (
+        <TaskItem key={task.id} task={task} />
+      ))}
+    </ul>
+  );
+}
