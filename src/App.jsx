@@ -5,7 +5,7 @@ import { Filter } from "./components/Filter";
 function App() {
   return (
     <div>
-      <h1>To-Do List com Recoil</h1>
+      <h1>ToDo Lista com Recoil</h1>
       <TaskForm />
       <Filter />
       <TaskList />
